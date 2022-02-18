@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking if this runs on edited PR.
-        run: echo This runs for edited section.
+        env:
+          DESC: ${{ github.event.description }}
+        run: echo This runs for edited section - $DESC
   
