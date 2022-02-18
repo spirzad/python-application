@@ -6,7 +6,6 @@ if __name__ == "__main__":
     import json
     import glob
     import os.path
-    import pandas as pd
     from Onboarding_Checklist_Module import Onboarding_Checklist
         
     # Parsing argument in the API.
