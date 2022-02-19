@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Checking if this runs on edited PR.
         env:
-          DESC: ${{ github.event.pull_request }}
-        run: echo This runs for edited section - $DESC
+          eve: ${{ github.event.pull_request.number }}
+        run: echo This runs for edited section - $eve
