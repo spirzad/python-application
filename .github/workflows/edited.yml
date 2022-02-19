@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Checking if this runs on edited PR.
         env:
-          PR_EVENT: ${{ github.event }}
           PULL_REQUEST_TITLE : ${{ github.event.pull_request.title }}
           PULL_REQUEST_AUTHOR_NAME : ${{ github.event.pull_request.user.login }}
           PULL_REQUEST_URL : ${{ github.event.pull_request.html_url }}
