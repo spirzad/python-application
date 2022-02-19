@@ -14,4 +14,14 @@ jobs:
         env:
           DESC: ${{ github.event.description }}
         run: echo This runs for edited section - $DESC
+      - name: Checking for Body var.
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          echo This runs for event - $BODY
+      - name: Testing for github event for pull request.
+        env:
+          PR: ${{ github.event.pull_request }}
+        run: echo Github event PR - $PR
+      
   
