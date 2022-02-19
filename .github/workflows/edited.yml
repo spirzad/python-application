@@ -21,7 +21,7 @@ jobs:
           echo This runs for event - $BODY
       - name: Testing for github event for pull request.
         env:
-          PR: ${{ github.event.pull_request }}
+          PR: ${{ github.event.pull_request.head.sha }}
         run: echo Github event PR - $PR
       
   
