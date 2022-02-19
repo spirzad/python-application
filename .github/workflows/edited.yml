@@ -12,16 +12,5 @@ jobs:
     steps:
       - name: Checking if this runs on edited PR.
         env:
-          DESC: ${{ github.event.description }}
+          DESC: ${{ github.event.pull_request }}
         run: echo This runs for edited section - $DESC
-      - name: Checking for Body var.
-        env:
-          BODY: ${{ github.event.comment.body }}
-        run: |
-          echo This runs for event - $BODY
-      - name: Testing for github event for pull request.
-        env:
-          PR: ${{ github.event.pull_request.head.sha }}
-        run: echo Github event PR - $PR
-      
-  
