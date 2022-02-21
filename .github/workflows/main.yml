@@ -17,4 +17,5 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         run: |
             ls
+            pwd
             python work.py
