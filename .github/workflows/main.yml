@@ -19,4 +19,4 @@ jobs:
             python -m pip install requests
       - name: Run Script
         run: |
-            pwd
+            python work.py
