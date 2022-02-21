@@ -5,7 +5,7 @@ Created on Feb 15, 2022
 '''
 
 import sys
-sys.path.append('/home/runner/work/python-application/python-application/modules')
+sys.path.append('D:\a\python-application\python-application\modules')
 
 import json
 import requests
