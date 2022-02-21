@@ -17,8 +17,8 @@ jobs:
       - name: Install Dependencies.
         run: |
             python -m pip install requests
-            set http_proxy=http://proxy-dmz.intel.com:912
-            set https_proxy=http://proxy-dmz.intel.com:912
+            set http_proxy=http://proxy-chain.intel.com:911
+            set https_proxy=https://proxy-chain.intel.com:911
       - name: Run Script
         run: |
             python work.py
