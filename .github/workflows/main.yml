@@ -5,7 +5,7 @@ on:
     
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     
     steps:
       - name: checkout repo content
@@ -19,4 +19,4 @@ jobs:
             python -m pip install requests
       - name: Run Script
         run: |
-            python work.py
+            pwd
