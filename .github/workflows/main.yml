@@ -5,7 +5,7 @@ on:
     
 jobs:
   build:
-    runs-on: runner-linux01
+    runs-on: [self-hosted, Linux, X64, runner-linux01]
     
     steps:
       - name: checkout repo content
