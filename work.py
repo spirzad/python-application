@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/runner/work/python-application/python-application/modules')
+sys.path.append('D:\a\python-application\python-application\modules')
 
 
 if __name__ == "__main__":
