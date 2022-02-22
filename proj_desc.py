@@ -22,8 +22,9 @@ if __name__ == "__main__":
   go = GitHubClass(auth_token=auth_token)
   go.generate_header()
   
-  repo_names = list(repo_name)
+  repo_names = repo_name.split()
   pr_desc = ""
+
   for repo in repo_names:
       repo_data = go.get_pulls_allstate_by_repo(repo_org ,repo, pull_type="per_page")
       
