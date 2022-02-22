@@ -55,6 +55,7 @@ class GitHubClass:
             result = json.loads(result)
             
             print("INFO - Fetching file content..")
+            print("Result : ", result)
             file_content = result['content']
             file_content_encoding = result.get('encoding')
             
