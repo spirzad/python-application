@@ -6,8 +6,12 @@ if __name__ == "__main__":
     import json
     import glob
     import os.path
-    from Onboarding_Checklist_Module import Onboarding_Checklist        
-        
+    from Onboarding_Checklist_Module import Onboarding_Checklist
+    import argparse
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--auth_token", "-a", help="You need to provide auth token.",type=str, required=True)
+    
     checklist = Onboarding_Checklist(auth_token="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")
     type = "yaml"
     
