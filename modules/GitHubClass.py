@@ -301,6 +301,18 @@ class GitHubClass:
         
         return data
         
+    def post_comment_by_pr(self, org, repo_name, pull_number, comment):
+        
+        self.url = "https://api.github.com/repos/"+org+"/"+repo_name+"/issues/"+pull_number+"/comments"
+        print(self.url)
+        
+        data = '{"body":"'+comment+'"}'
+        response = requests.request("POST", url=self.get_restAPI(), headers=self.get_header(), proxies=self.get_proxy(), data=data,verify=True)
+        result   = response.json()
+        json_result = result
+        
+        return json_result
+    
     def get_auth_token(self): return self.auth_token
     def get_proxy(self): return self.proxies
     def get_header(self): return self.header
