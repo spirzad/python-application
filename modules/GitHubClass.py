@@ -48,7 +48,6 @@ class GitHubClass:
         
         self.url = url
         print("INFO - ",self.url)
-        print("Proxy - ",self.get_proxy())
         error = True
         try:
             response = requests.request("GET", url=self.get_restAPI(), headers=self.get_header(), proxies=self.get_proxy(), verify=True)
