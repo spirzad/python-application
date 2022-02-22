@@ -315,10 +315,10 @@ class GitHubClass:
     
     def post_bot_review(self, org, repo_name, pull_number, comment, event):
         
-        self.url = "https://api.github.com/repos/"+org+"/"+repo_name+"/pulls/"+pull_number+"/reviews?event="+str(event)
+        self.url = "https://api.github.com/repos/"+org+"/"+repo_name+"/pulls/"+pull_number+"/reviews
         print(self.url)
         
-        data = '{"body":"'+comment+'"}'
+        data = '{"event":"'+event+'", "body":"'+comment+'"}'
         response = requests.request("POST", url=self.get_restAPI(), headers=self.get_header(), proxies=self.get_proxy(), data=data, verify=True)
         result   = response.json()
         json_result = result
