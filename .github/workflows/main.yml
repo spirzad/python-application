@@ -19,4 +19,4 @@ jobs:
             AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             AUTH: ${{ secrets.AUTH }}
         run: |
-            python work.py --auth_token=$AUTH
+            python proj_desc.py --auth_token=$AUTH
