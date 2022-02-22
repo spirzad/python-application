@@ -1,8 +1,9 @@
 name: Python Script
     
 on:
-  pull_request:
+  pull_request_review:
     types:
+        - submitted
         - edited
         
   workflow_dispatch:
