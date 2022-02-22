@@ -13,7 +13,7 @@ if __name__ == "__main__":
   auth_token = str(args.auth_token)
   
   # Github Class Instantiation.
-  go = GitHubClass(auth_token=self.auth_token)
+  go = GitHubClass(auth_token=auth_token)
   go.generate_header()
   
   repo_names = ["python-application"]
