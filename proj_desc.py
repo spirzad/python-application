@@ -22,4 +22,8 @@ if __name__ == "__main__":
       repo_data = go.get_pulls_allstate_by_repo("spirzad" ,repo, pull_type="per_page")
       
       for data in repo_data:
-          print("INFO - ",data)
+          pull_number = data["number"]
+          state = data["state"]
+          message = data["body"]
+          
+          print("PR - ",pull_number," state - ",state, " message - "message)
