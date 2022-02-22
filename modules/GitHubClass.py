@@ -315,7 +315,7 @@ class GitHubClass:
     
     def post_bot_review(self, org, repo_name, pull_number, comment, event):
         
-        self.url = "https://api.github.com/repos/"+org+"/"+repo_name+"/pulls/"+pull_number+"/reviews
+        self.url = "https://api.github.com/repos/"+org+"/"+repo_name+"/pulls/"+pull_number+"/reviews"
         print(self.url)
         
         data = '{"event":"'+event+'", "body":"'+comment+'"}'
