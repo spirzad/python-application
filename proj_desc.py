@@ -38,7 +38,7 @@ if __name__ == "__main__":
 print("INFO - PR : ", pr_number)
 print("INFO - PR_Desc", pr_desc)
 
-if("AUTHOR") in pr_desc:
+if "AUTHOR" in pr_desc:
     response = go.post_comment_by_pr(org=repo_org, repo_name=repo_name, pull_number=pull_number, "Author is present in PR Description.")
 else:
     response = go.post_comment_by_pr(org=repo_org, repo_name=repo_name, pull_number=pull_number, "This is crazy comment.")
