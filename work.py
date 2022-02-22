@@ -8,7 +8,7 @@ if __name__ == "__main__":
     import os.path
     from Onboarding_Checklist_Module import Onboarding_Checklist        
         
-    checklist = Onboarding_Checklist(auth_token="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")
+    checklist = Onboarding_Checklist(auth_token="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")
     type = "yaml"
     
     if type == "yaml":
