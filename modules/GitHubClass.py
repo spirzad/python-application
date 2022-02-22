@@ -63,7 +63,7 @@ class GitHubClass:
                 file_content = str(base64.b64decode(file_content).decode())
                 error = False
         except Exception as e:
-            print("ERR - Problem in fetching data from the URL - ",e)
+            print("ERR - Problem in fetching data from the URL")
             file_content = "Couldn't fetch File content."
             
             
