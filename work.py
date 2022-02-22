@@ -11,8 +11,10 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
     parser.add_argument("--auth_token", "-a", help="You need to provide auth token.",type=str, required=True)
+    args = parser.parse_args()
     
-    checklist = Onboarding_Checklist(auth_token="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")
+    auth_token = str(args.auth_token)
+    checklist = Onboarding_Checklist(auth_token=auth_token)
     type = "yaml"
     
     if type == "yaml":
