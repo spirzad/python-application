@@ -1,6 +1,10 @@
 name: Python Script
     
 on:
+  pull_request:
+    types:
+        - edited
+        
   workflow_dispatch:
     
 jobs:
