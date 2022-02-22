@@ -26,4 +26,4 @@ if __name__ == "__main__":
           state = data["state"]
           message = data["body"]
           
-          print("PR - ",pull_number," state - ",state, " message - "message)
+          print("PR - ",pull_number," state - ", state ," message - ", message)
