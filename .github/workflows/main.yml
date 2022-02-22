@@ -17,5 +17,7 @@ jobs:
       - name: Getting Github Token & Running Script
         env:
             AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            test: ${{ secrets.DATA }}
         run: |
+            echo $test
             python work.py --auth_token=$AUTH_TOKEN
