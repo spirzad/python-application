@@ -1,0 +1,15 @@
+name: Pull Request Review.
+
+on:
+  pull_request_review:
+    types:
+      - submitted
+
+jobs:
+  pr_review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking
+        run: |
+          echo PR review submitting.
+    
