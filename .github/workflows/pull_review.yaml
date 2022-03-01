@@ -9,7 +9,7 @@ on:
 
 jobs:
   pr_review:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checking
         run: |
