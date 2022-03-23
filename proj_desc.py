@@ -36,14 +36,14 @@ if __name__ == "__main__":
           if int(pull_number) == int(pr_number):
                 pr_desc = message
                 break
-print("INFO - PR : ", pr_number)
-print("INFO - PR_Desc", pr_desc)
+  print("INFO - PR : ", pr_number)
+  print("INFO - PR_Desc", pr_desc)
 
-if "AUTHOR" in pr_desc:
-    response = go.post_comment_by_pr(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="Author is present in PR Description.")
-    review_bot = go.post_bot_review(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="Approving changes.", event="APPROVE")
-    print("INFO - ", review_bot)
-else:
-    response = go.post_comment_by_pr(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="This is crazy comment.")
-    review_bot = go.post_bot_review(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="Requesting changes.", event="REQUEST_CHANGES")
-    print("INFO - ", review_bot)
+  if "AUTHOR" in pr_desc:
+      response = go.post_comment_by_pr(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="Author is present in PR Description.")
+      review_bot = go.post_bot_review(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="Approving changes.", event="APPROVE")
+      print("INFO - ", review_bot)
+  else:
+      response = go.post_comment_by_pr(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="This is crazy comment.")
+      review_bot = go.post_bot_review(org=repo_org, repo_name=repo_name, pull_number=pr_number, comment="Requesting changes.", event="REQUEST_CHANGES")
+      print("INFO - ", review_bot)
