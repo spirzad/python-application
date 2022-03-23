@@ -24,4 +24,4 @@ jobs:
             REPO_NAME : ${{ github.event.repository.name }}
             OWNER: ${{ github.event.repository.owner.login }}
         run: |
-            python proj_desc.py --auth_token=adsadsa --pull_number=$PULL_REQUEST_NUMBER --repo_name=$REPO_NAME --repo_org=$OWNER
+            python proj_desc.py --auth_token=$github.token --pull_number=$PULL_REQUEST_NUMBER --repo_name=$REPO_NAME --repo_org=$OWNER
