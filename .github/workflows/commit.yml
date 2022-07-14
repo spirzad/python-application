@@ -2,7 +2,7 @@ name: Commit_Check-PRs
 
 on: 
     pull_request:
-        types: [opened]
+        types: [opened, synchronize]
 
 jobs:
   script:
